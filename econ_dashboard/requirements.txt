@@ -1,0 +1,14 @@
+dash
+plotly
+pandas
+numpy
+yfinance
+datetime
+pandas-datareader
+newsapi-python
+dash-bootstrap-components
+flask-caching
+nasdaq-data-link
+python-dotenv
+nltk
+google-genai
