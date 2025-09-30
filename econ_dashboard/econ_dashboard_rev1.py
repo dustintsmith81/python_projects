@@ -281,10 +281,10 @@ def generate_investment_recommendations(indicators, spreads, market_data):
         if not market_perf['MA50'].dropna().empty and not market_perf['MA200'].dropna().empty:
             if market_perf['MA50'].iloc[-1] > market_perf['MA200'].iloc[-1]: score += 3
             else: score -= 2
-    if score >= 8: return {"title": "Optimistic Outlook (Pro-Risk)", "details": "Economic indicators are broadly positive, credit conditions appear favorable, and market momentum is strong. Consider overweighting equities and growth-oriented assets.", "portfolio": "65% Equities, 20% Bonds, 10% Commodities, 5% Cash."}
-    elif score >= 2: return {"title": "Cautiously Optimistic (Balanced)", "details": "A mix of positive and negative signals suggests a balanced approach. The economy shows resilience but some headwinds exist. Maintain a diversified, moderate-risk portfolio.", "portfolio": "55% Equities, 30% Bonds, 10% Real Estate, 5% Cash."}
-    elif score > -5: return {"title": "Neutral / Cautious (Defensive)", "details": "Economic data is mixed to negative, with potential risks from credit markets. A defensive posture is warranted. Focus on quality and capital preservation.", "portfolio": "40% Equities, 45% Bonds, 10% Alternatives, 5% Cash."}
-    else: return {"title": "Pessimistic Outlook (Risk-Off)", "details": "Most indicators show warning signs, credit spreads may be widening, and market trends are negative. Prioritize capital preservation and reduce exposure to volatile assets.", "portfolio": "25% Equities, 55% Government Bonds, 15% Gold, 5% Cash."}
+    if score >= 8: return {"title": "Optimistic Outlook (Pro-Risk)", "details": "Economic indicators are broadly positive, credit conditions appear favorable, and market momentum is strong. Consider overweighting equities and growth-oriented assets.", "portfolio": "70% Equities, 10% Bonds, 20% Commodities, 0% Cash."}
+    elif score >= 2: return {"title": "Cautiously Optimistic (Balanced)", "details": "A mix of positive and negative signals suggests a balanced approach. The economy shows resilience but some headwinds exist. Maintain a diversified, moderate-risk portfolio.", "portfolio": "60% Equities, 20% Bonds, 10% Real Estate, 10% Cash."}
+    elif score > -5: return {"title": "Neutral / Cautious (Defensive)", "details": "Economic data is mixed to negative, with potential risks from credit markets. A defensive posture is warranted. Focus on quality and capital preservation.", "portfolio": "20% Equities, 40% Bonds, 20% Alternatives, 20% Cash."}
+    else: return {"title": "Pessimistic Outlook (Risk-Off)", "details": "Most indicators show warning signs, credit spreads may be widening, and market trends are negative. Prioritize capital preservation and reduce exposure to volatile assets.", "portfolio": "10% Equities, 10% Government Bonds, 70% Gold, 10% Cash."}
 
 # --- UI and Graphing Functions ---
 

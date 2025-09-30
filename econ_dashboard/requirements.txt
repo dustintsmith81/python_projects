@@ -12,3 +12,5 @@ nasdaq-data-link
 python-dotenv
 nltk
 google-genai
+matplotlib
+scipy
